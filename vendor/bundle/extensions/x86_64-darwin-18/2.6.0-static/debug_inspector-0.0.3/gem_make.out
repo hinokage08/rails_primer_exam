@@ -1,0 +1,15 @@
+current directory: /Users/yamazakiyouichi/workspace/rails-exam/exam_app/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/yamazakiyouichi/.rbenv/versions/2.6.3/bin/ruby -I /Users/yamazakiyouichi/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20190925-2691-1a56azo.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yamazakiyouichi/workspace/rails-exam/exam_app/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/yamazakiyouichi/workspace/rails-exam/exam_app/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/yamazakiyouichi/workspace/rails-exam/exam_app/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20190925-2691-6a5pj6

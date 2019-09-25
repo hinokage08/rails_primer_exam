@@ -8,6 +8,10 @@ class WebsitesController < ApplicationController
     @website = Website.new
   end
 
+  def edit
+    @website = Website.find(params[:id])
+  end
+
   def create
     @website = Website.create(website_params)
     if @website.save
