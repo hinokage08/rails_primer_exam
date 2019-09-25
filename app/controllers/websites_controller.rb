@@ -36,6 +36,10 @@ before_action :set_website, only: [:show, :edit, :update, :destroy]
     redirect_to websites_path, notice: "ツイートを削除しました"
   end
 
+  def confirm
+    @website = Website.new(website_params)
+  end
+
   private
 
   def website_params
