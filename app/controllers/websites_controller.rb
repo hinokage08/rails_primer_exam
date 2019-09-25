@@ -13,6 +13,10 @@ class WebsitesController < ApplicationController
     redirect_to new_website_path
   end
 
+  def show
+    @website = Website.find(params[:id])
+  end
+
   private
   def website_params
     params.require(:website).permit(:content)
