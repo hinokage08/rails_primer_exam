@@ -1,0 +1,7 @@
+<%= form_with(model: @website,local: true) do |form| %>
+  <div class="blog_content">
+    <%= form.label :content %><br>
+    <%= form.text_area :content,size: "60x20",class: "text_area-control"%>
+  </div>
+  <%= form.submit %>
+<% end %>
