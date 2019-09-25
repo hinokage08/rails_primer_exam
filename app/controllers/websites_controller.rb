@@ -9,8 +9,12 @@ class WebsitesController < ApplicationController
   end
 
   def create
-    Website.create(website_params)
-    redirect_to new_website_path
+    @website = Website.create(website_params)
+    if @website.save
+      redirect_to websites_path,notice: "ツイートされました"
+    else
+      render :new
+    end
   end
 
   def show

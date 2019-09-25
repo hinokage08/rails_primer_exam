@@ -1,4 +1,15 @@
 <%= form_with(model: @website,local: true) do |form| %>
+<% if @website.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= @website.errors.count %>件のエラーがあります。</h3>
+    <ul>
+
+    <% @website.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
   <div class="blog_content">
     <%= form.label :content %><br>
     <%= form.text_area :content,size: "60x20",class: "text_area-control"%>
