@@ -1,5 +1,5 @@
 class WebsitesController < ApplicationController
-
+before_action :set_blog, only: [:show, :edit, :update]
   def index
     @websites = Website.all
   end
@@ -9,7 +9,6 @@ class WebsitesController < ApplicationController
   end
 
   def edit
-    @website = Website.find(params[:id])
   end
 
   def create
@@ -22,11 +21,20 @@ class WebsitesController < ApplicationController
   end
 
   def show
-    @website = Website.find(params[:id])
+  end
+
+  def update
+    if @website.update(website_params)
+      redirect_to website_path, notice:"編集しました"
+    else
+      render :edit
+    end
   end
 
   private
   def website_params
     params.require(:website).permit(:content)
+  def set_website
+    @website = Website.find(params[:id])
   end
 end
