@@ -19,7 +19,41 @@
  }
 
  header {
-   background-color: #F5B4B3;
+   background-color: #E0FFFF;
    height: 50px;
    font-size: 1.5rem;
  }
+
+ ul {
+   margin: 0;
+   padding: 0;
+ }
+
+ li {
+   list-style: none;
+ }
+
+
+ .top_menu li {
+   float: left;
+   width: auto;
+ }
+
+
+.home {
+  width: 67px;
+  margin: 0;
+  float: left;
+}
+.t_bottom {
+  width: 45px;
+  margin: 0;
+  float: left;
+}
+
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

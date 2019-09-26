@@ -5,30 +5,37 @@
   </head>
   <body>
     <header class="header">
+      <%= link_to websites_path do %>
+      <%= image_tag 'Tweet_bird.png',class: 'home' %>
+      <% end %>
+      <nav>
+        <ul class="top_menu clearfix">
+          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom' %></li>
+        </ul>
+      </nav>
     </header>
-<%= form_with(model: @website,local: true,url: choose_new_or_edit) do |form| %>
-<% if @website.errors.any? %>
-  <div id="error_explanation">
-    <h3><%= @website.errors.count %>件のエラーがあります。</h3>
-    <ul>
-
-    <% @website.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-  <div class="blog_content">
-    <%= form.label :content %><br>
-    <%= form.text_area :content,class: "text_area-control"%>
-  </div>
-  <%= form.submit "ツイートする" %>
-<% end %>
-<aside class="side_menu">
-</aside>
-<article class="content">
-</article>
-<footer class="footer">
-</footer>
-</body>
+      <%= form_with(model: @website,local: true,url: choose_new_or_edit) do |form| %>
+      <% if @website.errors.any? %>
+        <div id="error_explanation">
+          <h3><%= @website.errors.count %>件のエラーがあります。</h3>
+          <ul>
+          <% @website.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <div class="website_content">
+          <%= form.label :content%><br>
+          <%= form.text_area :content,size: "60x10",class: "text_area-control"%>
+        </div>
+        <%= form.submit "ツイートする" %>
+      <% end %>
+      <aside class="side_menu">
+      </aside>
+      <article class="content">
+      </article>
+      <footer class="footer">
+      </footer>
+  </body>
 </html>

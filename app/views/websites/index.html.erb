@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <meta charset="UTF-8">
@@ -6,6 +5,14 @@
   </head>
   <body>
     <header class="header">
+      <%= image_tag 'Tweet_bird.png',class: 'home' %>
+      <nav>
+        <ul class="top_menu clearfix">
+          <%= link_to new_website_path do %>
+          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom' %></li>
+          <% end %>
+        </ul>
+      </nav>
     </header>
     <h2>自分のツイート</h2>
     <p><%= notice %></p>
