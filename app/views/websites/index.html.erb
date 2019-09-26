@@ -1,13 +1,30 @@
-<h2>自分のツイート</h2>
-<p><%= notice %></p>
-<table>
-<% @websites.each do |website| %>
-  <tr>
-    <td><%= website.content %></td>
-    <td><%= link_to '詳細', website_path(website.id) %></td>
-    <td><%= link_to '編集', edit_website_path(website.id) %></td>
-    <td><%= link_to '削除', website_path(website.id), method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-<%= link_to '新しいツイートをする', new_website_path %>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitter</title>
+  </head>
+  <body>
+    <header class="header">
+    </header>
+    <h2>自分のツイート</h2>
+    <p><%= notice %></p>
+    <table>
+    <% @websites.each do |website| %>
+      <tr>
+        <td><%= website.content %></td>
+        <td><%= link_to '詳細', website_path(website.id) %></td>
+        <td><%= link_to '編集', edit_website_path(website.id) %></td>
+        <td><%= link_to '削除', website_path(website.id), method: :delete ,data:{ confirm: '本当に削除してもよろしいですか？'}%></td>
+      </tr>
+    <% end %>
+    </table>
+    <%= link_to '新しいツイートをする', new_website_path %>
+    <aside class="side_menu">
+    </aside>
+    <article class="content">
+    </article>
+    <footer class="footer">
+    </footer>
+  </body>
+</html>

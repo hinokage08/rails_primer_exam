@@ -3,6 +3,8 @@
 <%= form_with(model: @website, url: websites_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
 
-  <p>本文:<%= @website.content %></p>
-  <%= form.submit  "ツイートする" %>
+  <p>本文:</p>
+    <p><%= @website.content %></p>
+  <%= form.submit "ツイート" %>
+  <%= form.submit "戻る", name: 'back' %>
 <% end %>

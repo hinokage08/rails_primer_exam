@@ -12,11 +12,15 @@ before_action :set_website, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @website = Website.create(website_params)
-    if @website.save
-      redirect_to websites_path,notice: "ツイートされました"
-    else
+    @website = Website.new(website_params)
+    if params[:back]
       render :new
+    else
+      if @website.save
+        redirect_to websites_path,notice: "ツイートされました"
+      else
+        render :new
+      end
     end
   end
 
@@ -38,6 +42,7 @@ before_action :set_website, only: [:show, :edit, :update, :destroy]
 
   def confirm
     @website = Website.new(website_params)
+    render :new if @website.invalid?
   end
 
   private

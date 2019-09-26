@@ -1,3 +1,11 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitter</title>
+  </head>
+  <body>
+    <header class="header">
+    </header>
 <%= form_with(model: @website,local: true,url: choose_new_or_edit) do |form| %>
 <% if @website.errors.any? %>
   <div id="error_explanation">
@@ -12,7 +20,15 @@
 <% end %>
   <div class="blog_content">
     <%= form.label :content %><br>
-    <%= form.text_area :content,size: "60x20",class: "text_area-control"%>
+    <%= form.text_area :content,class: "text_area-control"%>
   </div>
-  <%= form.submit %>
+  <%= form.submit "ツイートする" %>
 <% end %>
+<aside class="side_menu">
+</aside>
+<article class="content">
+</article>
+<footer class="footer">
+</footer>
+</body>
+</html>
