@@ -9,24 +9,25 @@
       <nav>
         <ul class="top_menu clearfix">
           <%= link_to new_website_path do %>
-          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom' %></li>
+          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom_image' %></li>
           <% end %>
         </ul>
       </nav>
     </header>
     <h2>自分のツイート</h2>
     <p><%= notice %></p>
-    <table>
     <% @websites.each do |website| %>
+    <table>
       <tr>
         <td><%= website.content %></td>
-        <td><%= link_to '詳細', website_path(website.id) %></td>
-        <td><%= link_to '編集', edit_website_path(website.id) %></td>
-        <td><%= link_to '削除', website_path(website.id), method: :delete ,data:{ confirm: '本当に削除してもよろしいですか？'}%></td>
       </tr>
-    <% end %>
+      <td><%= website.created_at %></td>
+      <td><%= link_to image_tag('show.png', class:'show_image'),website_path(website.id) %></td>
+      <td><%= link_to image_tag('edit.png', class: 'edit_image'), edit_website_path(website.id) %></td>
+      <td><%= link_to image_tag('trash.png', class: 'trash_image'), website_path(website.id), method: :delete ,data:{ confirm: '本当に削除してもよろしいですか？'}%></td>
+      <br>
     </table>
-    <%= link_to '新しいツイートをする', new_website_path %>
+    <% end %>
     <aside class="side_menu">
     </aside>
     <article class="content">

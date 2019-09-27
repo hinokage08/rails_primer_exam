@@ -1,6 +1,26 @@
-tr {
+table {
 padding: 20px 30px;
 background-color: white;
 overflow: hidden;
 box-shadow: 0 2px 6px #c1ced7;
+}
+
+.editlink {
+  color: #000000;
+  text-decoration: none;
+}
+
+.edit_image {
+  width: 20px;
+  margin: 0;
+}
+
+.trash_image {
+  width: 20px;
+  margin: 0;
+}
+
+.show_image {
+  width: 20px;
+  margin: 0;
 }
