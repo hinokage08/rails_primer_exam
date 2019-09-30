@@ -10,7 +10,7 @@
       <% end %>
       <nav>
         <ul class="top_menu clearfix">
-          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom' %></li>
+          <li><%= image_tag 'Tweet_bottom.png',class: 't_bottom_image' %></li>
         </ul>
       </nav>
     </header>
@@ -26,11 +26,10 @@
         </div>
       <% end %>
         <div class="website_content">
-          <%= form.label :content%><br>
           <%= form.text_area :content,size: "60x10",class: "text_area-control"%>
+          <%= form.submit "ツイートする",class: "t_submit" %>
         </div>
-        <%= form.submit "ツイートする" %>
-      <% end %>
+          <% end %>
       <aside class="side_menu">
       </aside>
       <article class="content">

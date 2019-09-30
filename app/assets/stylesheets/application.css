@@ -21,9 +21,18 @@
 
  header {
    background-color: #15202b;
-   height: 50px;
-   font-size: 1.5rem;
+   height: 60px;
    border-bottom: solid 1px #ffffff;
+ }
+
+ footer {
+   background-color: #15202b;
+   height: 60px;
+   text-align:center
+ }
+
+ footer a{
+   color: #ffffff;
  }
 
  ul {
@@ -41,14 +50,13 @@
    width: auto;
  }
 
-
 .home {
-  width: 67px;
+  width: 75px;
   margin: 0;
   float: left;
 }
 .t_bottom_image {
-  width: 45px;
+  width: 50px;
   margin: 0;
   float: left;
 }
