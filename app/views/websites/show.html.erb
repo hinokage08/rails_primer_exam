@@ -1,1 +1,28 @@
-<p><%= @website.content %></p>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitter</title>
+  </head>
+  <body>
+    <div class="container">
+    <header class="header">
+      <%= link_to image_tag('Tweet_bird.png', class: 'home'),websites_path %>
+      <nav>
+        <ul class="top_menu clearfix">
+          <li><%= link_to image_tag('Tweet_bottom.png', class: 't_bottom_image'),new_website_path %></li>
+        </ul>
+      </nav>
+    </header>
+    <h2>ツイート詳細</h2>
+    <table>
+      <tr>
+        <td><%= @website.content %></td>
+      </tr>
+      <td><%= @website.created_at %></td>
+    </table>
+    <footer class="footer">
+      <a> © 2019 Twitter, Inc.</a>
+    </footer>
+    </div>
+  </body>
+</html>
